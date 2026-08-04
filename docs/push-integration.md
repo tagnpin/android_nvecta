@@ -91,7 +91,7 @@ NVECTA supports three different ways to request notification permission:
 2. **Use NVECTA's customizable permission prompt**
 3. **Use the native Android system permission dialog**
 
-For comprehensive implementation instructions, configuration options, callback handling, and best practices for all three permission request approaches, refer to the **[Notification Runtime Permission](docs/push-runtime-permission.md)** guide.
+For comprehensive implementation instructions, configuration options, callback handling, and best practices for all three permission request approaches, refer to the **[Notification Runtime Permission](push-runtime-permission.md)** guide.
 
 ### Option 1 — Use Your Own Permission Flow
 
