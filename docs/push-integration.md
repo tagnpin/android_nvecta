@@ -288,3 +288,16 @@ For example, a social media app could have:
 Users can then decide which categories they want to receive notifications from. For instance, they may choose to receive chat messages but turn off promotional notifications.
 
 <br>
+
+# Related Documentation
+
+Continue exploring other SDK features:
+
+- 🔔 [Push Notifications Runtime Permission Prompt](/docs/push-runtime-permission.md)
+- 🔔 [Push Notification Channels](/docs/push-notification-channels.md)
+- 📥 [Notification Center](/docs/notification-center-integration.md)
+- 🔗 [Deep Links](/docs/deep-link-handling.md)
+- 📊 [Track Events](/docs/event-tracking-integration.md)
+- 👤 [Track Users](/docs/user-tracking-integration.md)
+- 🎯 [In-App Notifications](/docs/inapp-integration.md)
+- 🎯 [In-App Native Nudges](/docs/inapp-nudges.md)

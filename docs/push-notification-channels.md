@@ -400,3 +400,18 @@ Once a channel is created, its importance level cannot be changed programmatical
 * Create channels during application startup before sending notifications.
 
 This ensures users have better control over their notification preferences and improves overall notification engagement.
+
+<br>
+
+# Related Documentation
+
+Continue exploring other SDK features:
+
+- 🔔 [Push Notifications](/docs/push-integration.md)
+- 🔔 [Push Notifications Runtime Permission Prompt](/docs/push-runtime-permission.md)
+- 📥 [Notification Center](/docs/notification-center-integration.md)
+- 📊 [Track Events](/docs/event-tracking-integration.md)
+- 👤 [Track Users](/docs/user-tracking-integration.md)
+- 🎯 [In-App Notifications](/docs/inapp-integration.md)
+- 🎯 [In-App Native Nudges](/docs/inapp-nudges.md)
+- 🔗 [Deep Links](/docs/deep-link-handling.md)

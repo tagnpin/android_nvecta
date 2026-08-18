@@ -465,13 +465,13 @@ With NVECTA Android SDK event tracking, you can:
 - Trigger automations
 - Improve user engagement
 
-# Next Steps
+<br>
+
+# Related Documentation
 
 Continue exploring the SDK:
 
-- 👤 Track Users
-- 🔔 Push Notifications
-- 💬 In-App Notifications & Nudges
-- 📦 User Properties
-- 🌍 Global Attributes
-- 🔗 Deep Links
+- 👤 [Track Users](/docs/user-tracking-integration.md)
+- 🔔 [Push Notifications](/docs/push-integration.md)
+- 💬 [In-App Notifications](/docs/inapp-integration.md)
+- 🔗 [Deep Links](/docs/deep-link-handling.md)

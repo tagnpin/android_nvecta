@@ -44,7 +44,26 @@ repositories {
 }
 ```
 
-#### Step 3- Manifest Permission
+#### Step 3- Minimum SDK Version
+Ensure the minSdkVersion is properly configured, as NVECTA requires a minimum Android SDK version of 23.
+
+```gradle
+defaultConfig {
+    minSdkVersion 23
+}
+```
+
+#### Step 4- Enable Java 8 Compatibility
+```gradle
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+```
+
+#### Step 5- Manifest Permission
 
 Add the following permission inside **AndroidManifest.xml**.
 
@@ -57,7 +76,18 @@ Add the following permission inside **AndroidManifest.xml**.
 <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 ```
 
-#### Step 4- Initialize the SDK
+**Disable Android Backup for Plugin Integration**
+
+Set `android:allowBackup="false"` inside the `<application>` tag in `AndroidManifest.xml`. This is required for proper plugin integration and helps prevent unexpected restoration of SDK-related data by the Android system.
+
+```xml
+<application
+    android:allowBackup="false"
+    ...>
+</application>
+```
+
+#### Step 6- Initialize the SDK
 The SDK **must be initialized inside your Application class**.
 
 > **Important**
@@ -101,7 +131,7 @@ class MyApplication : Application() {
 }
 ```
 
-#### Step 5- Register Your Application Class
+#### Step 7- Register Your Application Class
 
 ```xml
 <application
@@ -111,6 +141,58 @@ class MyApplication : Application() {
 ```
 
 The SDK is now initialized and ready to use.
+
+<br>
+
+## 🔑 Where can I find my Brand ID and Encryption Key?
+
+Replace `YOUR_NVECTA_BRAND_ID` and `YOUR_NVECTA_BRAND_SECRET_KEY` with your actual NVECTA credentials.
+
+You can obtain these credentials in one of the following ways:
+
+- Contact your assigned **NVECTA Account Manager**.
+- Retrieve them yourself from the **NVECTA Dashboard**.
+
+**📍 NVECTA Dashboard**  
+https://console.notifyvisitors.com/brand/admin/integration_javaScriptCode?active_tab=direct_integration
+
+**📖 Detailed Guide**  
+https://support.nvecta.com/support/solutions/articles/84000395836-how-to-get-brand-id-encryption-key-and-api-keys-in-nvecta
+
+<br>
+
+## Integration Verification
+
+### After completing the integration, verify the NVECTA SDK initialization from Android Studio Logcat
+
+Open:
+
+```text
+Android Studio → Logcat
+```
+
+Filter logs using our plugin tag:
+
+```text
+NotifyVisitors
+```
+
+Example successful initialization logs:
+
+```text
+PlayStore Connection Setup completed!!
+This is the first call of NotifyVisitors SDK.
+!SDK-VERSION! :: notifyvisitors: v5.8.4
+NV BrandID = 1234
+DeviceID == x0x0x0x0x0x0x0x0x0
+```
+## Recommended Checks
+
+Verify the following after app launch:
+
+- SDK initializes without errors
+- Device token is generated successfully
+- No crash or ANR appears in logs
 
 <br>
 

@@ -584,13 +584,14 @@ With proper user identification, you can:
 
 **Remember:** Always wait for the user identification callback response before tracking events to ensure proper data synchronization and event mapping on the NVECTA panel.
 
+<br>
+
 # Related Documentation
 
 Continue exploring other SDK features:
 
-- 📊 Track Events
-- 🌍 Global Attributes (Super Properties)
-- 🔔 Push Notifications
-- 💬 In-App Notifications & Nudges
-- 🔗 Deep Links
-- 📥 Inbox
+- 📊 [Track Events](/docs/event-tracking-integration.md)
+- 🎯 [In-App Notifications](/docs/inapp-integration.md)
+- 🎯 [In-App Native Nudges](/docs/inapp-nudges.md)
+- 🔗 [Deep Links](/docs/deep-link-handling.md)
+- 🔔 [Push Notifications](/docs/push-integration.md)

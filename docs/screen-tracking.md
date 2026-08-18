@@ -33,7 +33,6 @@ https://www.nvecta.com/docs/native-android
 - When a user reports a bug, see exactly which screens they visited before it happened
 - Understand the sequence of screens leading to a crash
 
----
 
 ## 🚀 How to Implement Screen Tracking
 
@@ -57,6 +56,23 @@ In some cases, you may want more control over screen tracking, especially when:
 - You want to track specific sub-views within a single Activity or Fragment.
 - You want to override the automatically logged screen name with a custom identifier.
 
+<br>
+
+> [!NOTE]
+> **Automatic screen tracking is enabled by default.**
+>
+> If you want to manually control all screen tracking events, disable automatic screen tracking by adding the following metadata inside your application's `<application>` tag in `AndroidManifest.xml`:
+>
+> ```xml
+> <meta-data
+>     android:name="notifyvisitors_analytics_automatic_screen_tracking_enabled"
+>     android:value="false" />
+> ```
+>
+> Once disabled, the SDK will no longer automatically log screen views. You must explicitly call `trackScreen()` whenever you want to record a screen view.
+
+Notice that the value should be false, not true, because you're describing how to stop automatic tracking. If the value is true, automatic tracking remains enabled.
+
 #### The Basic Function
 
 **Java**
@@ -72,12 +88,47 @@ NotifyVisitorsApi.getInstance(this).trackScreen("screen_name")
 
 This one line of code tells the SDK: *"User is now on 'ScreenName'"*
 
----
 
 #### Parameters
 - "screen_name" → A unique identifier (String) for the screen.
    - Use clear, consistent names for screens (e.g., "HomeScreen", "ProductDetails", "CartScreen", "PaymentConfirmation").
    - This naming consistency ensures reports are meaningful.
+
+## `screen_view` Event Response Callback
+You can get event trigger response in the form of JSONObject. It will help you to track whether it is successful or not.
+
+**Java**
+
+```java
+NotifyVisitorsApi.getInstance(activityContext).getEventResponse(new OnEventTrackListener() {
+     @Override
+     public void onResponse(JSONObject jsonObject) {
+        //do your task
+     }
+ });
+ ```
+
+ **Kotlin**
+```kotlin
+NotifyVisitorsApi.getInstance(this).getEventResponse(object : OnEventTrackListener{
+   override fun onResponse(data: JSONObject?) {
+       //do your task here
+   }
+})
+```
+
+**Callback Response**
+
+```jsonobject
+{
+  "status": "success",
+  "eventName": "screen_view",
+  "message": "Event accepted for processing",
+  "type": 0,
+  "callbackType": "event"
+}
+```
+
 
 ## ✅ Best Practices
 
@@ -108,5 +159,17 @@ Focus on tracking screens that matter:
 // Good: Includes item ID for detailed analytics
 NotifyVisitorsApi.getInstance(this).trackScreen('ProductDetail_${productId}');
 ```
+<br>
+
+# Related Documentation
+
+Continue exploring other SDK features:
+
+- 📊 [Track Events](/docs/event-tracking-integration.md)
+- 👤 [Track Users](/docs/user-tracking-integration.md)
+- 🎯 [In-App Notifications](/docs/inapp-integration.md)
+- 🎯 [In-App Native Nudges](/docs/inapp-nudges.md)
+- 🔔 [Push Notifications](/docs/push-integration.md)
+- 🔗 [Deep Links](/docs/deep-link-handling.md)
 
 ---

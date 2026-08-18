@@ -283,3 +283,18 @@ For the best user experience:
 4. If permission is denied, guide users to app notification settings.
 
 This approach generally results in higher notification opt-in rates because users understand why the permission is being requested before seeing the system prompt.
+
+<br>
+
+# Related Documentation
+
+Continue exploring other SDK features:
+
+- 🔔 [Push Notifications](/docs/push-integration.md)
+- 🔔 [Push Notification Channels](/docs/push-notification-channels.md)
+- 📥 [Notification Center](/docs/notification-center-integration.md)
+- 📊 [Track Events](/docs/event-tracking-integration.md)
+- 👤 [Track Users](/docs/user-tracking-integration.md)
+- 🎯 [In-App Notifications](/docs/inapp-integration.md)
+- 🎯 [In-App Native Nudges](/docs/inapp-nudges.md)
+- 🔗 [Deep Links](/docs/deep-link-handling.md)
