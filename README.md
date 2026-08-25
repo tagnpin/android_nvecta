@@ -98,6 +98,11 @@ The SDK **must be initialized inside your Application class**.
 
 Create an Application class if you don't already have one.
 
+
+> **Replace `YOUR_NVECTA_BRAND_ID` and `YOUR_NVECTA_BRAND_SECRET_KEY` with your actual Brand ID and Encryption Key** in below code.
+>
+> To find these credentials, see the [🔑 Where can I find my Brand ID and Encryption Key?](#-where-can-i-find-my-brand-id-and-encryption-key)
+
 **Java**
 
 ```java
@@ -150,7 +155,6 @@ Replace `YOUR_NVECTA_BRAND_ID` and `YOUR_NVECTA_BRAND_SECRET_KEY` with your actu
 
 You can obtain these credentials in one of the following ways:
 
-- Contact your assigned **NVECTA Account Manager**.
 - Retrieve them yourself from the **NVECTA Dashboard**.
 
 **📍 NVECTA Dashboard**  
@@ -193,6 +197,15 @@ Verify the following after app launch:
 - SDK initializes without errors
 - Device token is generated successfully
 - No crash or ANR appears in logs
+
+## Validation
+
+After completing the integration, verify that the SDK is successfully communicating with NVECTA.
+
+Follow the **[Integration Code and Event Validation](https://support.nvecta.com/support/solutions/articles/84000399408-integration-code-and-event-validation)** guide to confirm that:
+- App sessions are visible in the NVECTA dashboard.
+- Events are being received successfully.
+- The SDK integration has been completed correctly.
 
 <br>
 

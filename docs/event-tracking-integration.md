@@ -368,7 +368,18 @@ EVENT NAME : <event_name> !! ATTRIBUTES : {"attr1":"val1"}
 EventName = <event_name>, EventAttr(s) = {"attr1":"val1"}, LifeTimeVal = 7, Scope = 1
 ```
 
----
+## Verify Event Tracking
+
+After confirming the event appears in Logcat, validate that it is also received by NVECTA.
+
+Follow the **[Integration Code and Event Validation](https://www.nvecta.com/support/solutions/articles/84000399408-integration-code-and-event-validation)** guide to verify that:
+- App sessions are visible in the NVECTA dashboard.
+- Events are received successfully.
+- Event attributes are captured correctly.
+
+## Troubleshooting
+
+If events appear in Logcat but are not visible in the NVECTA dashboard, refer to the **[Troubleshoot Event Tracking](https://www.nvecta.com/support/solutions/articles/84000389021-troubleshoot-event-tracking)** guide for common causes and resolution steps.
 
 <br>
 

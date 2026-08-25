@@ -274,8 +274,8 @@ Incoming Push Notification
 
 <br>
 
-## (6) [Push Notification Channels](/docs/push-notification-channels.md)
-Starting with Android Oreo (Android 8.0), every notification must belong to a **Notification Channel**.
+## (6) Push Notification Channels
+Starting with Android Oreo (Android 8.0), every notification must belong to a [**Notification Channel**](/docs/push-notification-channels.md).
 
 You can think of a Notification Channel as a folder or category for notifications. Instead of treating all notifications the same, Android groups them by purpose.
 
