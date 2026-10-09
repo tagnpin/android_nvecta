@@ -5,7 +5,7 @@ This document explains how to track custom events in your android application us
 Official Documentation: <br>
 https://www.nvecta.com/docs/tracking-android-events
 
----
+<br>
 
 # What is Event Tracking?
 
@@ -32,8 +32,6 @@ These events help in:
 
 NVECTA automatically tracks some system events after SDK integration, while custom events can be tracked manually based on your business requirements.
 
----
-
 <br>
 
 # Basic Event Tracking Flow
@@ -58,8 +56,6 @@ Track "purchase_completed" event
 Event visible in NVECTA dashboard
 ```
 
----
-
 <br>
 
 ## Event Types
@@ -78,8 +74,6 @@ Examples:
 
 No additional code is required.
 
----
-
 ### Custom Events
 
 Custom events allow you to track actions that are specific to your application.
@@ -92,9 +86,6 @@ Examples:
 - Payment Successful
 - Subscription Started
 - Quiz Completed
-
----
-
 
 <br>
 
@@ -114,8 +105,6 @@ NotifyVisitorsApi.getInstance(this).event("Product Viewed", null, null, "1");
 NotifyVisitorsApi.getInstance(this).event("Product Viewed", null, null, "1")
 ```
 
----
-
 <br>
 
 # Event Method Parameters
@@ -126,8 +115,6 @@ NotifyVisitorsApi.getInstance(this).event("Product Viewed", null, null, "1")
 | `attributes` | Additional event data |
 | `lifeTimeValue` | Score/value associated with event |
 | `scope` | Defines tracking frequency |
-
----
 
 <br>
 
@@ -172,8 +159,6 @@ val attributes = JSONObject().apply {
 
 NotifyVisitorsApi.getInstance(this).event("Add To Cart", attributes, null, "1")
 ```
-
----
 <br>
 
 # Lifetime Value (LTV)
@@ -215,8 +200,6 @@ val attributes = JSONObject().apply {
 NotifyVisitorsApi.getInstance(this).event("Order Placed", attributes, "2499", "1")
 ```
 
----
-
 <br>
 
 # Understanding Scope Values
@@ -233,8 +216,6 @@ Example:
 ```java
 NotifyVisitorsApi.getInstance(this).event("Login", null, null, "2");
 ```
-
----
 
 <br>
 
@@ -274,7 +255,18 @@ val attributes = JSONObject().apply {
 NotifyVisitorsApi.getInstance(this).event("Profile Updated", attributes, null, "1")
 ```
 
----
+<br>
+
+# Tracking Events with Global Attributes
+
+Global Attributes are key–value pairs that NVECTA automatically attaches to custom events and supported system events, such as app_launch and session_start, reducing the need to pass the same attributes repeatedly.
+
+- Set or update attributes using `setGlobalAttributes()`, remove individual attributes using `removeGlobalAttribute()`, or clear all attributes using `clearGlobalAttributes()`.
+- Global Attributes support three persistence modes: Memory, Session (default), and Persistent (with a configurable expiry in days).
+- Configure persistence before `register()` if you need a mode other than the default.
+- Use Global Attributes for shared context such as campaign IDs, experiment variants, membership plans, and referral codes.
+
+Detailed documentation: [Global Attributes](https://www.nvecta.com/docs/global-attributes-1)
 
 <br>
 
@@ -342,8 +334,6 @@ The SDK returns different response messages and type codes based on event tracki
 
 >**Type:** Identifies the internal SDK component or processing stage where the callback originated. Primarily intended for debugging and troubleshooting SDK-level errors.
 
----
-
 <br>
 
 # Verify Event Tracking From Android Studio Logcat
@@ -393,8 +383,6 @@ If events appear in Logcat but are not visible in the NVECTA dashboard, refer to
 - Avoid sending sensitive or personally identifiable information (PII), such as passwords, payment details, or confidential user data.
 - Use **Scope = 2** only for events that should be tracked once per session, such as `login` or `app_opened`.
 
----
-
 <br>
 
 # Recommended Event Naming Examples
@@ -407,8 +395,6 @@ If events appear in Logcat but are not visible in the NVECTA dashboard, refer to
 | Add To Cart | `add_to_cart` |
 | Purchase | `purchase_completed` |
 | Subscription | `subscription_started` |
-
----
 
 <br>
 
@@ -440,8 +426,6 @@ val attributes = JSONObject().apply {
 NotifyVisitorsApi.getInstance(this).event("add_to_cart", attributes, "4999", "1")
 ```
 
----
-
 ## 👤 User Registration
 
 Track when a new user signs up.
@@ -462,7 +446,6 @@ val attributes = JSONObject().apply {
 
 NotifyVisitorsApi.getInstance(this).event("user_signup", attributes, null, "2")
 ```
----
 
 <br>
 

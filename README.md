@@ -2,7 +2,7 @@
 
 # NVECTA Native Android SDK
 
-[![Static Badge](https://img.shields.io/badge/Central_Maven-5.8.4-blue?logo=android)](https://central.sonatype.com/artifact/com.notifyvisitors.notifyvisitors/notifyvisitors/overview) ![Formerly](https://img.shields.io/badge/Formerly-NotifyVisitors-blue)
+[![Static Badge](https://img.shields.io/badge/Central_Maven-5.8.5-blue?logo=android)](https://central.sonatype.com/artifact/com.notifyvisitors.notifyvisitors/notifyvisitors/overview) ![Formerly](https://img.shields.io/badge/Formerly-NotifyVisitors-blue)
 
 <br>
 
@@ -31,7 +31,7 @@ Ready to get started? [Sign up here](https://console.notifyvisitors.com/console/
 
 ```gradle
 dependencies {
-    implementation 'com.notifyvisitors.notifyvisitors:notifyvisitors:v5.8.4'
+    implementation 'com.notifyvisitors.notifyvisitors:notifyvisitors:v5.8.5'
 }
 ```
 
