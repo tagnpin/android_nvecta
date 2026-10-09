@@ -1,5 +1,11 @@
 # CHANGE LOG
 
+## Version 5.8.6 *(September 30, 2026)*
+
+### Removed
+
+- Removed geofencing-related code and manifest declarations from the plugin/sdk to prevent unused geofencing components from being included in applications that do not require geofencing.
+
 ## Version 5.8.5 *(August 10, 2026)*
 
 ### Added
